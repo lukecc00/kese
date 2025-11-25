@@ -306,7 +306,7 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 images.add(object.getString(i));
             }
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+//            throw new RuntimeException(e);
         }
         return images;
     }

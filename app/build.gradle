@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 def cfg = rootProject.ext
 
@@ -49,7 +51,8 @@ dependencies {
     }
 
     implementation "com.alibaba:arouter-api:1.5.2"
-    annotationProcessor "com.alibaba:arouter-compiler:1.5.2"
+//    annotationProcessor "com.alibaba:arouter-compiler:1.5.2"
+    kapt "com.alibaba:arouter-compiler:1.5.2"
 
     implementation libs.appcompat
     implementation libs.material

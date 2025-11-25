@@ -83,10 +83,14 @@ public class MainActivity extends AppCompatActivity {
         Fragment videoFragment = (Fragment) ARouter.getInstance().build("/videoview/VideoFragment").navigation(this);
         Fragment communityFragment = (Fragment) ARouter.getInstance().build("/communityPageView/CommunityFragment").navigation(this);
         Fragment classificationFragment = (Fragment) ARouter.getInstance().build("/classificationView/ClassificationFragment").navigation(this);
+        Fragment aiChatFragment = (Fragment) ARouter.getInstance().build("/aiPage/PlantChatFragment").navigation(this);
+
+
 
         fragments = new ArrayList<>();
         fragments.add(fragment);
-        fragments.add(videoFragment);
+//        fragments.add(videoFragment);
+        fragments.add(aiChatFragment);
         fragments.add(new Fragment());
         fragments.add(communityFragment);
         fragments.add(personalInfoFragment);

@@ -119,7 +119,7 @@ public class PersonalInfoModel implements IInfoContract.Model {
                         mPresenter.updateUserInfo(user);
                     }
                 } catch (JSONException e) {
-                    throw new RuntimeException(e);
+//                     throw new RuntimeException(e);
                 }
             }
         });

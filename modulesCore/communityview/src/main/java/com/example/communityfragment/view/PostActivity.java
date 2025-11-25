@@ -341,7 +341,7 @@ public class PostActivity extends AppCompatActivity implements IPostContract.Vie
                 images.add(object.getString(i));
             }
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+//            throw new RuntimeException(e);
         }
         return images;
     }

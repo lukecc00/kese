@@ -1,10 +1,19 @@
-if (rootProject.ext.isDebug) {
-    apply plugin: 'com.android.application'
-} else {
-    apply plugin: 'com.android.library'
+plugins {
+    alias(libs.plugins.kotlin.android) apply false
 }
+
 def cfg = rootProject.ext
 
+if (cfg.isDebug) {
+    apply plugin: 'com.android.application'
+    apply plugin: 'org.jetbrains.kotlin.android'
+} else {
+    apply plugin: 'com.android.library'
+    apply plugin: 'org.jetbrains.kotlin.android'
+}
+
+apply plugin: libs.plugins.kotlin.android.get().pluginId
+apply plugin: libs.plugins.kotlin.kapt.get().pluginId
 
 android {
     namespace cfg.applicationId.communityview
@@ -42,9 +51,9 @@ android {
     sourceSets {
         main {
             if (cfg.isDebug) {
-                manifest.srcFile 'src/main/debug/AndroidManifest.XML'
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml' // 小写 xml 后缀
             } else {
-                manifest.srcFile 'src/main/AndroidManifest.XML'
+                manifest.srcFile 'src/main/AndroidManifest.xml'
                 java {
                     exclude "**/debug/**"
                 }
@@ -60,18 +69,16 @@ android {
 dependencies {
     implementation project(':modulesBase:libBase')
 
+    // 原有依赖保留
     implementation 'com.alibaba:arouter-api:1.5.2'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
-
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+    kapt 'com.alibaba:arouter-compiler:1.5.2'
     implementation "commons-io:commons-io:2.11.0"
-
-    implementation  'com.github.dhaval2404:imagepicker:2.1'
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
     implementation 'com.github.yalantis:ucrop:2.2.9-native'
-
     implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation  'io.github.scwang90:refresh-layout-kernel:3.0.0-alpha'
-    implementation  'io.github.scwang90:refresh-header-classics:3.0.0-alpha'
-
+    implementation 'io.github.scwang90:refresh-layout-kernel:3.0.0-alpha'
+    implementation 'io.github.scwang90:refresh-header-classics:3.0.0-alpha'
 
     implementation libs.appcompat
     implementation libs.material

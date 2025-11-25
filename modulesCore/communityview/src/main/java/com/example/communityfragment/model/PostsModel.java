@@ -91,7 +91,7 @@ public class PostsModel implements IPostsContract.Model {
                             mPresenter.onDataReceived(posts);
                         }
                     } catch (JSONException e) {
-                        throw new RuntimeException(e);
+//                         throw new RuntimeException(e);
                     }
                 } else {
                     mPresenter.onDataReceivedFailure();
@@ -143,7 +143,7 @@ public class PostsModel implements IPostsContract.Model {
                             mPresenter.onDataReceived(posts);
                         }
                     } catch (JSONException e) {
-                        throw new RuntimeException(e);
+//                         throw new RuntimeException(e);
                     }
                 } else {
                     mPresenter.onDataReceivedFailure();
@@ -207,7 +207,7 @@ public class PostsModel implements IPostsContract.Model {
             json.put("post_id", postId);
             json.put("direction", directionInt);
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+//             throw new RuntimeException(e);
         }
 
         MediaType mediaType = MediaType.parse("application/json");

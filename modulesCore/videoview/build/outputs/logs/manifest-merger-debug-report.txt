@@ -2,10 +2,7 @@
 manifest
 ADDED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml:2:1-11:12
 INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml:2:1-11:12
-INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml:2:1-11:12
 	package
-		INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
-		ADDED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml:2:1-11:12
 		INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml:2:11-69
@@ -27,13 +24,7 @@ uses-sdk
 INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
 INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
-INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
-INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
 	android:targetSdkVersion
 		INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
-		ADDED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
-		INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
-		ADDED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml
 		INJECTED from /Users/bytedance/Desktop/毕设/AgriVision/modulesCore/videoview/src/main/AndroidManifest.xml

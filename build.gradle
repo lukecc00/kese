@@ -1,6 +1,32 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // 这里的 AGP 版本会自动引用 libs.versions.toml 的配置
+        classpath "com.android.tools.build:gradle:${rootProject.libs.versions.agp.get()}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.libs.versions.kotlinVersion.get()}"
+    }
+}
+
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.kapt) apply false
 }
+
+allprojects {
+    plugins.withId('org.jetbrains.kotlin.android') {
+        android {
+            kotlinOptions {
+                jvmTarget = '11' // 全局默认 11，与 Java 一致
+                freeCompilerArgs = ['-Xjvm-default=all-compatibility'] // 兼容 Java 调用（可选）
+            }
+        }
+    }
+}
+
 apply from :"config.gradle"

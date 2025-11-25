@@ -49,7 +49,7 @@ public class MyInfoModel implements IMyInfoContract.Model {
             object.put("username", username);
             object.put("email", email);
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+//             throw new RuntimeException(e);
         }
 
         RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), object.toString());

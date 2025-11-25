@@ -67,7 +67,7 @@ public class ForgetModel implements IForgetContract.Model {
                 try {
                     Log.d(TAG, "发送验证码" + response.body().string());
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
+//                     throw new RuntimeException(e);
                 }
             }
         });
@@ -82,7 +82,7 @@ public class ForgetModel implements IForgetContract.Model {
             json.put("password", password);
             json.put("code", code);
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+//             throw new RuntimeException(e);
         }
 
         RequestBody requestBody = RequestBody

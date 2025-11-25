@@ -110,7 +110,7 @@ public class PostModel implements IPostContract.Model {
             json.put("parent_id", parentId);
             json.put("root_id", rootId);
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+//             throw new RuntimeException(e);
         }
 
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), json.toString());
