@@ -8,6 +8,7 @@ import android.util.Log;
 import com.example.chatpageview.bean.Msg;
 import com.example.chatpageview.contract.IChatContract;
 import com.example.chatpageview.presenter.ChatPresenterImpl;
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.SPUtils;
 import com.example.module.libBase.TimeUtils;
 import com.example.module.libBase.TokenManager;
@@ -35,7 +36,7 @@ public class ChatModelImpl implements IChatContract.Model {
     private ChatPresenterImpl mPresenter;
     private Context mContext;
     private static final OkHttpClient client = new OkHttpClient();
-    private static final String AI_URL = "http://101.200.122.3:8080/ai";
+    private static final String AI_URL = HostAddress.Host + "/ai";
     private Call currentCall;
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
 

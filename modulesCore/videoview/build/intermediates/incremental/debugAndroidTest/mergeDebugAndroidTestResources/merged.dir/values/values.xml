@@ -781,6 +781,7 @@
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="gray">#515151</color>
+    <color name="gray_light">#A09E9F</color>
     <color name="gray_transparent">#33515151</color>
     <color name="green_1">#2AAC60</color>
     <color name="green_2">#3b7e55</color>
@@ -11948,6 +11949,7 @@
     <attr name="ad_marker_color"/>
     <attr name="played_ad_marker_color"/>
   </declare-styleable>
+    <declare-styleable name="DragContainer"><attr format="color|reference" name="dc_footer_color"/><attr format="integer|reference" name="dc_reset_animator_duration"/><attr format="float|reference" name="dc_drag_damp"/></declare-styleable>
     <declare-styleable name="DrawableIndicator">
         <attr format="reference" name="normal_drawable"/>
         <attr format="reference" name="selected_drawable"/>
@@ -13496,6 +13498,23 @@
       <enum name="cut" value="1"/>
     </attr>
   </declare-styleable>
+    <declare-styleable name="ShapeBlurView">
+        <attr format="dimension" name="blur_radius"/>
+        <attr format="float" name="blur_down_sample"/>
+        <attr format="color" name="blur_overlay_color"/>
+        <attr format="dimension" name="blur_corner_radius"/>
+        <attr format="dimension" name="blur_corner_radius_top_left"/>
+        <attr format="dimension" name="blur_corner_radius_top_right"/>
+        <attr format="dimension" name="blur_corner_radius_bottom_left"/>
+        <attr format="dimension" name="blur_corner_radius_bottom_right"/>
+        <attr format="dimension" name="blur_border_width"/>
+        <attr format="color" name="blur_border_color"/>
+        <attr name="blur_mode">
+            <enum name="rectangle" value="0"/>
+            <enum name="circle" value="1"/>
+            <enum name="oval" value="2"/>
+        </attr>
+    </declare-styleable>
     <declare-styleable name="ShapeableImageView">
     <attr name="strokeWidth"/>
     <attr name="strokeColor"/>

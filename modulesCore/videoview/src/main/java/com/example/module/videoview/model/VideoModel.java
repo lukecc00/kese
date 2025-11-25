@@ -7,6 +7,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.TokenManager;
 import com.example.module.videoview.contract.IVideoContract;
 import com.example.module.videoview.model.classes.Video;
@@ -23,7 +24,7 @@ import okhttp3.ResponseBody;
 
 public class VideoModel implements IVideoContract.IVideoModel {
 
-    private static final String VIDEO_URL = "http://101.200.122.3:8080/firstpage/video";
+    private static final String VIDEO_URL = HostAddress.Host + "/firstpage/video";
 
     private static final String TAG = "VideoModel";
 

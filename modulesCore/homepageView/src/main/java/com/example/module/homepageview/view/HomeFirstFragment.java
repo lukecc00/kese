@@ -250,14 +250,16 @@ public class HomeFirstFragment extends Fragment implements IHomeFirstContract.IH
         Log.d(TAG, "cropDetailList: " + cropDetailList);
         if (cropDetailList == null) {
             cropDetailList = new ArrayList<>();
-            cropDetailList.add(list.get(0).getCropDetail().get(1));
-            cropDetailList.add(list.get(1).getCropDetail().get(1));
-            cropDetailList.add(list.get(2).getCropDetail().get(0));
-            cropDetailList.add(list.get(2).getCropDetail().get(1));
-            cropDetailList.add(list.get(3).getCropDetail().get(0));
-            cropDetailList.add(list.get(3).getCropDetail().get(1));
-            cropDetailList.add(list.get(4).getCropDetail().get(0));
-            cropDetailList.add(list.get(4).getCropDetail().get(1));
+            if (list.size() >= 4) {
+                cropDetailList.add(list.get(0).getCropDetail().get(1));
+                cropDetailList.add(list.get(1).getCropDetail().get(1));
+                cropDetailList.add(list.get(2).getCropDetail().get(0));
+                cropDetailList.add(list.get(2).getCropDetail().get(1));
+                cropDetailList.add(list.get(3).getCropDetail().get(0));
+                cropDetailList.add(list.get(3).getCropDetail().get(1));
+                cropDetailList.add(list.get(4).getCropDetail().get(0));
+                cropDetailList.add(list.get(4).getCropDetail().get(1));
+            }
             String jsonListAfterAdd = gson.toJson(cropDetailList);
             SPUtils.putString(getContext(), SPUtils.CROP_DETAIL_LIST_KEY, jsonListAfterAdd);
         }

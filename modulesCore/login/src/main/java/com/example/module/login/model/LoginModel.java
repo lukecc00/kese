@@ -3,6 +3,7 @@ package com.example.module.login.model;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.SPUtils;
 import com.example.module.libBase.TokenManager;
 import com.example.module.login.contract.ILoginContract;
@@ -24,9 +25,9 @@ public class LoginModel implements ILoginContract.Model {
     private ILoginContract.Presenter mPresenter;
     private Context mContext;
 
-    private static final String LOGIN_URL = "http://101.200.122.3:8080/user/login";
-    private static final String SIGNUP_URL = "http://101.200.122.3:8080/user/signup";
-    private static final String EMAIL_URL = "http://101.200.122.3:8080/user/email";
+    private static final String LOGIN_URL = HostAddress.Host + "/user/login";
+    private static final String SIGNUP_URL = HostAddress.Host + "/user/signup";
+    private static final String EMAIL_URL = HostAddress.Host + "/user/email";
 
     private static final OkHttpClient client = new OkHttpClient();
 

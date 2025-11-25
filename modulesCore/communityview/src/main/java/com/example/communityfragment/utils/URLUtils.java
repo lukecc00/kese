@@ -1,7 +1,9 @@
 package com.example.communityfragment.utils;
 
+import com.example.module.libBase.HostAddress;
+
 public class URLUtils {
-    private static final String BASE_URL = "http://101.200.122.3:8080";
+    private static final String BASE_URL = HostAddress.Host;
     // 查询帖子列表
     public static final String GET_POSTS_URL = BASE_URL + "/community-post/posts";
     // 查询指定社区帖子列表

@@ -3,6 +3,7 @@ package com.example.personalinfoview.model;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.SPUtils;
 import com.example.module.libBase.TokenManager;
 import com.example.module.libBase.bean.User;
@@ -26,8 +27,8 @@ public class PersonalInfoModel implements IInfoContract.Model {
     private PersonalInfoPresenter mPresenter;
     private Context mContext;
 
-    private static final String USER_URL = "http://101.200.122.3:8080/user/info";
-    private static final String AVATAR_URL = "http://101.200.122.3:8080/user/avatar";
+    private static final String USER_URL = HostAddress.Host + "/user/info";
+    private static final String AVATAR_URL = HostAddress.Host + "/user/avatar";
     private OkHttpClient client = new OkHttpClient();
 
     public PersonalInfoModel(PersonalInfoPresenter presenter, Context context) {

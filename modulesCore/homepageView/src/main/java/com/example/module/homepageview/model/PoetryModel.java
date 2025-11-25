@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 
 import com.example.module.homepageview.contract.IPoetryContract;
 import com.example.module.homepageview.model.classes.Poetry;
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.TokenManager;
 import com.google.gson.Gson;
 
@@ -25,7 +26,7 @@ public class PoetryModel implements IPoetryContract.IPoetryModel{
 
     private static final String TAG = "PoetryModel";
 
-    private static final String POETRY_URL = "http://101.200.122.3:8080/firstpage/poetry";
+    private static final String POETRY_URL = HostAddress.Host + "/firstpage/poetry";
 
     private Context mContext;
 

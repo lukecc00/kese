@@ -30,6 +30,7 @@ import com.example.module.homepageview.R;
 import com.example.module.homepageview.model.classes.CropBack;
 import com.example.module.homepageview.model.classes.Keyword;
 import com.example.module.homepageview.view.adapter.SearchRecyclerViewAdapter;
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.TokenManager;
 import com.example.module.libBase.bean.Crop;
 import com.google.gson.Gson;
@@ -59,8 +60,8 @@ interface SearchForCropCallback {
 public class SearchActivity extends AppCompatActivity {
     private static final String TAG = "SearchActivity";
 
-    private static final String SEARCH_URL = "http://101.200.122.3:8080/search";
-    private static final String SEARCH_CROP_URL = "http://101.200.122.3:8080/search/";
+    private static final String SEARCH_URL = HostAddress.Host + "/search";
+    private static final String SEARCH_CROP_URL = HostAddress.Host + "/search/";
 
     private EditText etSearch;
     private ImageButton btnBack;

@@ -14,6 +14,7 @@ import com.example.module.homepageview.model.classes.Poetry;
 import com.example.module.homepageview.model.classes.Proverb;
 import com.example.module.homepageview.model.classes.Recommend;
 import com.example.module.homepageview.presenter.HomePagePresenter;
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.TokenManager;
 import com.example.module.libBase.bean.Crop;
 import com.google.gson.Gson;
@@ -31,9 +32,9 @@ import okhttp3.ResponseBody;
 
 public class HomeFirstModel implements IHomeFirstContract.IHomeFirstModel<HomePagePresenter> {
 
-    private static final String CROP_URL = "http://101.200.122.3:8080/firstpage/crop";
-    private static final String PROVERB_URL = "http://101.200.122.3:8080/firstpage/proverb";
-    private static final String NEWS_URL = "http://101.200.122.3:8080/firstpage/news";
+    private static final String CROP_URL = HostAddress.Host + "/firstpage/crop";
+    private static final String PROVERB_URL = HostAddress.Host + "/firstpage/proverb";
+    private static final String NEWS_URL = HostAddress.Host + "/firstpage/news";
 
     private Context mContext;
     private static final String TAG = "HomeFirstModel";

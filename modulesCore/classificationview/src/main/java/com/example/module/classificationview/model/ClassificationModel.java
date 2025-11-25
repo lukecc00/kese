@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 
 import com.example.module.classificationview.R;
 import com.example.module.classificationview.contract.IClassificationContract;
+import com.example.module.libBase.HostAddress;
 import com.example.module.libBase.TokenManager;
 import com.example.module.libBase.bean.Crop;
 import com.google.gson.Gson;
@@ -27,7 +28,7 @@ import okhttp3.ResponseBody;
 public class ClassificationModel implements IClassificationContract.IClassificationModel{
 
     private static final String TAG = "ClassificationModel";
-    private static final String CROP_URL = "http://101.200.122.3:8080/firstpage/crop";
+    private static final String CROP_URL = HostAddress.Host + "/firstpage/crop";
     private Context mContext;
 
     public ClassificationModel(Context mContext) {
