@@ -29,7 +29,7 @@ ext {
             "chatpage"        : "com.example.chatpageview",
             "personalinfopage": "com.example.personalinfoview",
             "videopage"       : "com.example.module.videoview",
-            "classification"       : "com.example.module.classificationview",
+            "classification"  : "com.example.module.classificationview",
             "videopage"       : "com.example.module.videoview",
             "communityview"   : "com.example.communityfragment"
 
@@ -37,46 +37,49 @@ ext {
 
     //定义了一些常见的 Android 库的依赖项，包括 AppCompat 库、Material Design 库和 ConstraintLayout 库。
     BaseDeps = [
-            "appcompat"                  : "androidx.appcompat:appcompat:1.7.0",
-            "material"                   : "com.google.android.material:material:1.12.0",
-            "constraintlayout"           : "androidx.constraintlayout:constraintlayout:2.2.0",
-            "arouter"                    : "com.alibaba:arouter-api:1.5.2",
-            "eventbus"                   : "org.greenrobot:eventbus:3.3.1",
-            "banner"                     : "io.github.youth5201314:banner:2.2.3",
-            "softkeyboard"               : "com.github.boybeak:skb-global:0.2.0",
-            "glide"                      : "com.github.bumptech.glide:glide:4.16.0",
-            "exoplayer"                  : "com.google.android.exoplayer:exoplayer:2.18.1",
-            "circleimage"                : "de.hdodenhof:circleimageview:3.1.0",
-            "ucrop"                      : "com.github.yalantis:ucrop:2.2.9-native",
-            "blurview"                   : "com.github.centerzx:ShapeBlurView:1.0.5",
-            "drag"                       : "com.github.uin3566:DragFooterView:v1.0.2",
-            "codelocator"                : "com.bytedance.tools.codelocator:codelocator-core:2.0.4",
-            "codelocator_lancet_all"     : "com.bytedance.tools.codelocator:codelocator-lancet-all:2.0.4",
-            "codelocator_lancet_xml"     : "com.bytedance.tools.codelocator:codelocator-lancet-xml:2.0.4",
-            "codelocator_lancet_activity": "com.bytedance.tools.codelocator:codelocator-lancet-activity:2.0.4",
-            "codelocator_lancet_view"    : "com.bytedance.tools.codelocator:codelocator-lancet-view:2.0.4",
-            "codelocator_lancet_toast"   : "com.bytedance.tools.codelocator:codelocator-lancet-toast:2.0.4",
-            "codelocator_lancet_dialog"  : "com.bytedance.tools.codelocator:codelocator-lancet-dialog:2.0.4",
-            "codelocator_lancet_popup"   : "com.bytedance.tools.codelocator:codelocator-lancet-popup:2.0.4",
-            "retrofit"                   : "com.squareup.retrofit2:retrofit:2.9.0",
-            "retrofit_converter_gson"    : "com.squareup.retrofit2:converter-gson:2.9.0",
-            "rxjava"                     : "io.reactivex.rxjava3:rxjava:3.1.8",
-            "rxandroid"                  : "io.reactivex.rxjava3:rxandroid:3.0.2",
-            "retrofit_adapter_rxjava3"   : "com.squareup.retrofit2:adapter-rxjava3:2.9.0",
-            "kotlin-stdlib"              : "org.jetbrains.kotlin:kotlin-stdlib:1.9.20",
-            "okhttp3_logging_interceptor": "com.squareup.okhttp3:logging-interceptor:4.9.3"
+            "appcompat"       : libs.appcompat,
+            "material"        : libs.material,
+            "constraintlayout": libs.constraintlayout,
+            "arouter"         : libs.arouter.api,
+            "eventbus"        : libs.eventbus,
+            "banner"          : libs.banner,
+            "softkeyboard"    : libs.softkeyboard,
+            "glide"           : libs.glide,
+            "exoplayer"       : libs.exoplayer,
+            "circleimage"     : libs.circleimage,
+            "ucrop"           : libs.ucrop,
+            "blurview"        : libs.blurview,
+            "drag"            : libs.drag,
+            "rxjava"          : libs.rxjava,
+            "rxandroid"       : libs.rxandroid
     ]
 
     annotationDeps = [
-            "arouter_compiler": "com.alibaba:arouter-compiler:1.5.2",
+            "arouter_compiler": libs.arouter.compiler,
     ]
 
     networkDeps = [
-            "gson"   : "com.google.code.gson:gson:2.10",
-            "okhttp3": "com.squareup.okhttp3:okhttp:4.12.0",
+            "gson"                       : libs.gson,
+            "retrofit_adapter_rxjava3"   : libs.retrofit.adapter.rxjava3,
+            "kotlin-stdlib"              : libs.kotlin.stdlib,
+            "okhttp3_logging_interceptor": libs.okhttp3.logging.interceptor,
+            "retrofit"                   : libs.retrofit,
+            "retrofit_converter_gson"    : libs.retrofit.converter.gson,
+    ]
+
+    utilsDeps = [
+            "codelocator"                : libs.codelocator,
+            "codelocator_lancet_all"     : libs.codelocator.lancet.all,
+            "codelocator_lancet_xml"     : libs.codelocator.lancet.xml,
+            "codelocator_lancet_activity": libs.codelocator.lancet.activity,
+            "codelocator_lancet_view"    : libs.codelocator.lancet.view,
+            "codelocator_lancet_toast"   : libs.codelocator.lancet.toast,
+            "codelocator_lancet_dialog"  : libs.codelocator.lancet.dialog,
+            "codelocator_lancet_popup"   : libs.codelocator.lancet.popup,
     ]
 
     BaseLib = BaseDeps.values()
     BaseAnnotation = annotationDeps.values()
     BaseNetwork = networkDeps.values()
+    BaseUtils = utilsDeps.values()
 }

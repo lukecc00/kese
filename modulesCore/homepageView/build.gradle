@@ -57,13 +57,9 @@ android {
 dependencies {
 
     implementation project(':modulesBase:libBase')
-
-    implementation 'com.alibaba:arouter-api:1.5.2'
-//    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
-    kapt 'com.alibaba:arouter-compiler:1.5.2'
     implementation 'com.github.centerzx:ShapeBlurView:1.0.5'
 
-
+    kapt libs.arouter.compiler
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity

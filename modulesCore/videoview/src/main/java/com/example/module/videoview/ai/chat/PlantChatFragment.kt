@@ -23,8 +23,6 @@ import com.example.aitrae.api.ImageAnalysisRequest
 import com.example.aitrae.api.ImageAnalysisResponse
 import com.example.aitrae.api.ImageUrl
 import com.example.aitrae.api.Message
-import com.example.aitrae.chat.ChatAdapter
-import com.example.aitrae.chat.ChatMessageUi
 import com.example.aitrae.utils.ImageUtils
 import com.example.communityfragment.utils.ImagePickerUtil
 import com.example.module.videoview.R
@@ -60,8 +58,6 @@ class PlantChatFragment : Fragment() {
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
-
-        ApiClient.setApiKey(DouBaoModelParameters.API_KEY)
 
         // 初始化图片选择工具
         initImagePickerUtil()

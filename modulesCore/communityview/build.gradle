@@ -70,9 +70,7 @@ dependencies {
     implementation project(':modulesBase:libBase')
 
     // 原有依赖保留
-    implementation 'com.alibaba:arouter-api:1.5.2'
-//    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
-    kapt 'com.alibaba:arouter-compiler:1.5.2'
+    kapt libs.arouter.compiler
     implementation "commons-io:commons-io:2.11.0"
     implementation 'com.github.dhaval2404:imagepicker:2.1'
     implementation 'com.github.yalantis:ucrop:2.2.9-native'

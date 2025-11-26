@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 def cfg = rootProject.ext
@@ -35,8 +36,9 @@ android {
 
 dependencies {
     api cfg.BaseLib
-    annotationProcessor  cfg.BaseAnnotation
+    kapt  cfg.BaseAnnotation
     api cfg.BaseNetwork
+    api cfg.BaseUtils
 
 
     implementation libs.appcompat

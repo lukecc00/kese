@@ -8,6 +8,33 @@ material = "1.12.0"
 activity = "1.9.3"
 constraintlayout = "2.2.0"
 kotlinVersion = "1.9.20"
+arouter = "1.5.2"
+eventbus = "3.3.1"
+banner = "2.2.3"
+softkeyboard = "0.2.0"
+glide = "4.16.0"
+exoplayer = "2.18.1"
+circleimage = "3.1.0"
+ucrop = "2.2.9-native"
+blurview = "1.0.5"
+drag = "v1.0.2"
+codelocator = "2.0.4"
+codelocator_lancet_all = "2.0.4"
+codelocator_lancet_xml = "2.0.4"
+codelocator_lancet_activity = "2.0.4"
+codelocator_lancet_view = "2.0.4"
+codelocator_lancet_toast = "2.0.4"
+codelocator_lancet_dialog = "2.0.4"
+codelocator_lancet_popup = "2.0.4"
+retrofit = "2.9.0"
+retrofit_converter_gson = "2.9.0"
+rxjava = "3.1.8"
+rxandroid = "3.0.2"
+retrofit_adapter_rxjava3 = "2.9.0"
+okhttp3 = "4.9.3"
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -17,6 +44,35 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+arouter-api = { group = "com.alibaba", name = "arouter-api", version.ref = "arouter" }
+arouter-compiler = { group = "com.alibaba", name = "arouter-compiler", version.ref = "arouter" }
+eventbus = { group = "org.greenrobot", name = "eventbus", version.ref = "eventbus" }
+banner = { group = "io.github.youth5201314", name = "banner", version.ref = "banner" }
+softkeyboard = { group = "com.github.boybeak", name = "skb-global", version.ref = "softkeyboard" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+exoplayer = { group = "com.google.android.exoplayer", name = "exoplayer", version.ref = "exoplayer" }
+circleimage = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleimage" }
+ucrop = { group = "com.github.yalantis", name = "ucrop", version.ref = "ucrop" }
+blurview = { group = "com.github.centerzx", name = "ShapeBlurView", version.ref = "blurview" }
+drag = { group = "com.github.uin3566", name = "DragFooterView", version.ref = "drag" }
+codelocator = { group = "com.bytedance.tools.codelocator", name = "codelocator-core", version.ref = "codelocator" }
+codelocator_lancet_all = { group = "com.bytedance.tools.codelocator", name = "codelocator-lancet-all", version.ref = "codelocator_lancet_all" }
+codelocator_lancet_xml = { group = "com.bytedance.tools.codelocator", name = "codelocator-lancet-xml", version.ref = "codelocator_lancet_xml" }
+codelocator_lancet_activity = { group = "com.bytedance.tools.codelocator", name = "codelocator-lancet-activity", version.ref = "codelocator_lancet_activity" }
+codelocator_lancet_view = { group = "com.bytedance.tools.codelocator", name = "codelocator-lancet-view", version.ref = "codelocator_lancet_view" }
+codelocator_lancet_toast = { group = "com.bytedance.tools.codelocator", name = "codelocator-lancet-toast", version.ref = "codelocator_lancet_toast" }
+codelocator_lancet_dialog = { group = "com.bytedance.tools.codelocator", name = "codelocator-lancet-dialog", version.ref = "codelocator_lancet_dialog" }
+codelocator_lancet_popup = { group = "com.bytedance.tools.codelocator", name = "codelocator-lancet-popup", version.ref = "codelocator_lancet_popup" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit_converter_gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit_converter_gson" }
+rxjava = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxjava" }
+rxandroid = { group = "io.reactivex.rxjava3", name = "rxandroid", version.ref = "rxandroid" }
+retrofit_adapter_rxjava3 = { group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref = "retrofit_adapter_rxjava3" }
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlinVersion" }
+okhttp3_logging_interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

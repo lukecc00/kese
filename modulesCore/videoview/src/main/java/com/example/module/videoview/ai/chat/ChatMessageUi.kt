@@ -1,4 +1,4 @@
-package com.example.aitrae.chat
+package com.example.module.videoview.ai.chat
 
 import android.graphics.Bitmap
 
