@@ -56,12 +56,7 @@ public class HomeFirstPresenter implements IHomeFirstContract.IHomeFirstPresente
             @Override
             public void onNewsLoaded(List<News.Item> data) {
                 if (homeFirstView != null && data != null) {
-
                     List<News.Item> datas = new ArrayList<>();
-                    datas.addAll(data);
-                    datas.addAll(data);
-                    datas.addAll(data);
-                    datas.addAll(data);
                     datas.addAll(data);
                     homeFirstView.setupNewsRecyclerView(datas);
                 }

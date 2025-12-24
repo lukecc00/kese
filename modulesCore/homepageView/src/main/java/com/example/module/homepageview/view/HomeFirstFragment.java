@@ -192,7 +192,8 @@ public class HomeFirstFragment extends Fragment implements IHomeFirstContract.IH
                         scrollView.smoothScrollTo(0, text3.getTop());
                         break;
                     case 3:
-                        EventBus.getDefault().post(new SwitchPageEvent(1));
+                        ARouter.getInstance().build("/videoview/videoactivity").navigation(getContext());
+//                        EventBus.getDefault().post(new SwitchPageEvent(1));
                         break;
                     default:
                         break;
@@ -250,15 +251,42 @@ public class HomeFirstFragment extends Fragment implements IHomeFirstContract.IH
         Log.d(TAG, "cropDetailList: " + cropDetailList);
         if (cropDetailList == null) {
             cropDetailList = new ArrayList<>();
-            if (list.size() >= 4) {
-                cropDetailList.add(list.get(0).getCropDetail().get(1));
-                cropDetailList.add(list.get(1).getCropDetail().get(1));
-                cropDetailList.add(list.get(2).getCropDetail().get(0));
-                cropDetailList.add(list.get(2).getCropDetail().get(1));
-                cropDetailList.add(list.get(3).getCropDetail().get(0));
-                cropDetailList.add(list.get(3).getCropDetail().get(1));
-                cropDetailList.add(list.get(4).getCropDetail().get(0));
-                cropDetailList.add(list.get(4).getCropDetail().get(1));
+            if (list != null && list.size() >= 4) {
+                // 处理 list.get(0)
+                if (list.get(0) != null && list.get(0).getCropDetail() != null && list.get(0).getCropDetail().size() > 1) {
+                    cropDetailList.add(list.get(0).getCropDetail().get(1));
+                }
+                // 处理 list.get(1)
+                if (list.get(1) != null && list.get(1).getCropDetail() != null && list.get(1).getCropDetail().size() > 1) {
+                    cropDetailList.add(list.get(1).getCropDetail().get(1));
+                }
+                // 处理 list.get(2)
+                if (list.get(2) != null && list.get(2).getCropDetail() != null) {
+                    if (list.get(2).getCropDetail().size() > 0) {
+                        cropDetailList.add(list.get(2).getCropDetail().get(0));
+                    }
+                    if (list.get(2).getCropDetail().size() > 1) {
+                        cropDetailList.add(list.get(2).getCropDetail().get(1));
+                    }
+                }
+                // 处理 list.get(3)
+                if (list.get(3) != null && list.get(3).getCropDetail() != null) {
+                    if (list.get(3).getCropDetail().size() > 0) {
+                        cropDetailList.add(list.get(3).getCropDetail().get(0));
+                    }
+                    if (list.get(3).getCropDetail().size() > 1) {
+                        cropDetailList.add(list.get(3).getCropDetail().get(1));
+                    }
+                }
+                // 处理 list.get(4) - 原代码判断是 >=4 但访问了索引4，这里补充判断
+                if (list.size() >= 5 && list.get(4) != null && list.get(4).getCropDetail() != null) {
+                    if (list.get(4).getCropDetail().size() > 0) {
+                        cropDetailList.add(list.get(4).getCropDetail().get(0));
+                    }
+                    if (list.get(4).getCropDetail().size() > 1) {
+                        cropDetailList.add(list.get(4).getCropDetail().get(1));
+                    }
+                }
             }
             String jsonListAfterAdd = gson.toJson(cropDetailList);
             SPUtils.putString(getContext(), SPUtils.CROP_DETAIL_LIST_KEY, jsonListAfterAdd);

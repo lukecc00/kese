@@ -9,15 +9,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.module.videoview.R;
 import com.example.module.videoview.model.VideoModel;
 import com.example.module.videoview.presenter.VideoPresenter;
 
+@Route(path = "/videoview/videoactivity")
 public class VideoActivity extends AppCompatActivity {
 
     private VideoFragment mVideoFragment;
     private VideoPresenter mVideoPresenter;
     private VideoModel mVideoModel;
+
 
 
     @Override
