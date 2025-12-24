@@ -61,20 +61,21 @@ public class CropRecyclerViewAdapter extends RecyclerView.Adapter<CropRecyclerVi
     @Override
     public void onBindViewHolder(@NonNull CropRecyclerViewAdapter.CropViewHolder holder, int position) {
         Crop.DataItem crop = cropList.get(position);
-        holder.textView.setText(crop.getCropDetail().get(0).getName());
-        Glide.with(mContext)
-                .load(crop.getCropDetail().get(0).getIcon())
-                .into(holder.imageView); // 将图片加载到 ImageView
-        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (clickListener != null) {
-                    clickListener.onItemClick(crop);
+        if (!crop.getCropDetail().isEmpty()){
+            holder.textView.setText(crop.getCropDetail().get(0).getName());
+            Glide.with(mContext)
+                    .load(crop.getCropDetail().get(0).getIcon())
+                    .into(holder.imageView); // 将图片加载到 ImageView
+            holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (clickListener != null) {
+                        clickListener.onItemClick(crop);
+                    }
                 }
-            }
-        });
-        applyClickAnimation(holder.itemView); // 绑定动画
-
+            });
+            applyClickAnimation(holder.itemView); // 绑定动画
+        }
     }
     @Override
     public int getItemCount() {
