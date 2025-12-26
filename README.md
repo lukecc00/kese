@@ -13,11 +13,3 @@
 
 ![image-20250526110351255](https://github.com/user-attachments/assets/6f8daa71-79ee-4385-aa89-bfeffb97157d)
 
-# 3. 展示
-
-[展示视频](https://pan.baidu.com/s/12mslmzaWlk42nPFlYDMCHA?pwd=0716) 
-
-# 4. 其他
-
-[项目日报](https://rcn9hdw537lh.feishu.cn/docx/LMGjdEhSSofmLAxUh0rcGuilnhf?from=from_copylink) 
-
